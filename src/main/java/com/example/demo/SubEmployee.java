@@ -6,17 +6,16 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
-@Entity
-class Employee {
+class SubEmployee {
 
-    private @Id @GeneratedValue Long id;
+    private Long id;
     private String name;
     private String role;
 
-    Employee() {
+    SubEmployee() {
     }
 
-    Employee(String name, String role) {
+    SubEmployee(String name, String role) {
 
         this.name = name;
         this.role = role;
@@ -40,15 +39,7 @@ class Employee {
 
     public void setName(String name) {
         this.name = name;
-
     }
-    /*
-    public void setsubEmployee(SubEmployee sub) {
-        this.sub = sub;
-    }
-
-*/
-
 
     public void setRole(String role) {
         this.role = role;
@@ -59,9 +50,9 @@ class Employee {
 
         if (this == o)
             return true;
-        if (!(o instanceof Employee))
+        if (!(o instanceof SubEmployee))
             return false;
-        Employee employee = (Employee) o;
+        SubEmployee employee = (SubEmployee) o;
         return Objects.equals(this.id, employee.id) && Objects.equals(this.name, employee.name)
                 && Objects.equals(this.role, employee.role);
     }

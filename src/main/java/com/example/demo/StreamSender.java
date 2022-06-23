@@ -31,7 +31,7 @@ class StreamSender implements Runnable, CounterObserver {
 
        // emitter.send(event + "\n", MediaType.APPLICATION_JSON);
         emitter.send(event);
-        //emitter.send(event, MediaType.APPLICATION_JSON);
+       //k emitter.send(event, MediaType.APPLICATION_JSON);
         //emitter.send(List.of(event.getProcess(), event.getJobID()), MediaType.APPLICATION_JSON);
         emitter.send("\n", MediaType.APPLICATION_JSON);
       } 
